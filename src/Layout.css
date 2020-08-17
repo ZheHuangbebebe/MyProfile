@@ -1,0 +1,10 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+#left:hover{
+    opacity: 0.5;
+}
+#right:hover{
+    opacity: 0.5;
+}
