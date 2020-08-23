@@ -176,7 +176,7 @@ export function Education(props){
 
   return (
     <div style={{height:"100%", overflow:"hidden", padding: 24}}>
-    <QueueAnim delay={props.display?700:100}>
+    <QueueAnim type="top" delay={props.display?700:100}>
       {props.display ?
         [
         unsw_detail,

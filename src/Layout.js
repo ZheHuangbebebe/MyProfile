@@ -2,12 +2,13 @@ import React from "react";
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less';
 import "./Layout.css"
 import { Menu, Layout, Popover, Button, Steps } from 'antd';
-import { MailOutlined, AppstoreOutlined, GithubOutlined, WechatOutlined, LinkedinOutlined, PhoneOutlined,LeftOutlined,RightOutlined } from '@ant-design/icons';
-import anime from 'animejs/lib/anime.es.js';
+import { MailOutlined, AppstoreOutlined, GithubOutlined, WechatOutlined, LinkedinOutlined, PhoneOutlined,ProfileTwoTone,IdcardTwoTone,ProjectTwoTone, ContainerTwoTone } from '@ant-design/icons';
 import { Profile } from "./introPage";
 import { Education } from "./EduPage";
 import { Skill } from "./SkillPage";
 import qrcode from "./qrcode.jpeg"
+import reward2 from "./reward2.jpeg"
+import {Experience} from "./ExpPage";
 const { Content, Footer } = Layout;
 const { Step } = Steps
 // let ua = navigator.userAgent;
@@ -26,44 +27,43 @@ export default class MainLayout extends React.Component {
     page: 1
   };
 
-  handleClick = id => {
-    if(id==="left"){
-      this.setState({page:this.state.page-1})
-      if (leftAnim){
-        leftAnim.restart()
-      }
-      else{
-        leftAnim = anime({
-          targets: "#left",
-          scale: 1.8,
-          loop: 1,
-          direction: 'alternate',
-          duration:400
-        });
-      }
-    }
-    else if(id==="right"){
-      this.setState({page:this.state.page+1})
-      if (rightAnim){
-        rightAnim.restart()
-      }
-      else{
-        rightAnim = anime({
-          targets: "#right",
-          scale: 1.8,
-          loop: 1,
-          direction: 'alternate',
-          duration:400
-        });
-      }
-    }
-  };
+  // handleClick = id => {
+  //   if(id==="left"){
+  //     this.setState({page:this.state.page-1})
+  //     if (leftAnim){
+  //       leftAnim.restart()
+  //     }
+  //     else{
+  //       leftAnim = anime({
+  //         targets: "#left",
+  //         scale: 1.8,
+  //         loop: 1,
+  //         direction: 'alternate',
+  //         duration:400
+  //       });
+  //     }
+  //   }
+  //   else if(id==="right"){
+  //     this.setState({page:this.state.page+1})
+  //     if (rightAnim){
+  //       rightAnim.restart()
+  //     }
+  //     else{
+  //       rightAnim = anime({
+  //         targets: "#right",
+  //         scale: 1.8,
+  //         loop: 1,
+  //         direction: 'alternate',
+  //         duration:400
+  //       });
+  //     }
+  //   }
+  // };
 
   render() {
     const { current } = this.state;
-    console.log(this.state)
     return (
-      <Layout id="layout" style={{height:"100vh"}}>
+      <Layout id="layout" style={{height:"100vh", backgroundImage:{reward2}}}>
         <Menu  style={{height:"48px", background: "#ebfaff"}}  theme="light" onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
           <Menu.Item key="0" icon={<AppstoreOutlined />}>
             bebebe
@@ -85,12 +85,16 @@ export default class MainLayout extends React.Component {
           <div>
             <Skill display={this.state.page===3?true:false}/>
           </div>
+          <div>
+            <Experience display={this.state.page===4?true:false}/>
+          </div>
         </Content>
         <div style={{marginLeft:"30%", width:"40%", textAlign:"center", display:"inline", marginBottom:16}}>
           <Steps type="navigation" size="small"current={this.state.page-1} onChange={(p)=>{this.setState({page:p+1})}}>
-            <Step title="首页" />
-            <Step title="教育经历" />
-            <Step title="个人技能" />
+            <Step icon={<ProfileTwoTone />} title="首页" />
+            <Step icon={<IdcardTwoTone />} title="教育经历" />
+            <Step icon={<ProjectTwoTone />} title="个人技能" />
+            <Step icon={<ContainerTwoTone />} title="项目/实习经历" />
           </Steps>
           {/*<LeftOutlined style={{fontSize:36, marginRight:12, display:this.state.page===1?"none":"inline-block"}} id="left" onClick={()=>{this.handleClick("left")}}/>*/}
           {/*<RightOutlined style={{fontSize:36, marginLeft:12, display:this.state.page===3?"none":"inline-block"}} id="right" onClick={()=>{this.handleClick("right")}}/>*/}
