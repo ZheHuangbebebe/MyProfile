@@ -3,12 +3,12 @@ import 'antd/dist/antd.css'; // or 'antd/dist/antd.less';
 import "./Layout.css"
 import { Menu, Layout, Popover, Button, Steps } from 'antd';
 import { MailOutlined, AppstoreOutlined, GithubOutlined, WechatOutlined, LinkedinOutlined, PhoneOutlined,ProfileTwoTone,IdcardTwoTone,ProjectTwoTone, ContainerTwoTone } from '@ant-design/icons';
-import { Profile } from "./introPage";
-import { Education } from "./EduPage";
-import { Skill } from "./SkillPage";
-import qrcode from "./qrcode.jpeg"
-import reward2 from "./reward2.jpeg"
-import {Experience} from "./ExpPage";
+import { Profile } from "../pages/introPage";
+import { Education } from "../pages/EduPage";
+import { Skill } from "../pages/SkillPage";
+import qrcode from "../asset/qrcode.jpeg"
+import reward2 from "../asset/reward2.jpeg"
+import {Experience} from "../pages/ExpPage";
 const { Content, Footer } = Layout;
 const { Step } = Steps
 // let ua = navigator.userAgent;

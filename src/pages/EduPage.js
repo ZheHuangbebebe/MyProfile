@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less';
 import { Card, PageHeader, Tabs, Descriptions, Collapse, Typography } from "antd"
 import { InfoCircleOutlined, QuestionCircleTwoTone } from '@ant-design/icons';
-import unsw from "./unsw.jpg"
-import usyd from "./usyd.png"
-import reword1 from "./reward1.jpeg"
-import reword2 from "./reward2.jpeg"
-import reword3 from "./reward3.jpeg"
-import reword4 from "./reward4.jpeg"
+import unsw from "../asset/unsw.jpg"
+import usyd from "../asset/usyd.png"
+import reword1 from "../asset/reward1.jpeg"
+import reword2 from "../asset/reward2.jpeg"
+import reword3 from "../asset/reward3.jpeg"
+import reword4 from "../asset/reward4.jpeg"
 
 import QueueAnim from 'rc-queue-anim';
 const { Meta } = Card;

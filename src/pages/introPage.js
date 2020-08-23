@@ -3,8 +3,8 @@ import 'antd/dist/antd.css'; // or 'antd/dist/antd.less';
 import { Avatar, Typography, Button } from "antd"
 import Typed from 'typed.js';
 import { UserOutlined, CodeTwoTone } from '@ant-design/icons';
-import backgroundPic from "./backgroundPic.jpg"
-import base64 from "./1.jpeg"
+import backgroundPic from "../asset/backgroundPic.jpg"
+import base64 from "../asset/1.jpeg"
 import QueueAnim from 'rc-queue-anim';
 
 const { Title, Text, Paragraph } = Typography;
