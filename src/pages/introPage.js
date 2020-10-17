@@ -14,15 +14,15 @@ export function Profile(props){
   const mul = window.innerWidth*window.innerHeight
   const [size, setSize] = useState(mul/9000)
   let typed = null
-  console.log(window)
-  console.log(size)
+  // console.log(window)
+  // console.log(size)
   window.onresize = ()=>{
     setSize(window.innerWidth*window.innerHeight/9000)
   }
   function handleClick(text){
     let container = document.querySelector(".detail");
     let cursor
-    console.log(container)
+    // console.log(container)
     if(container.innerText){
       container.innerText = "";
     }

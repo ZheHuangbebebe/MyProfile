@@ -95,24 +95,29 @@ export function Education(props){
       <Panel header={<b>Professional Practice in IT</b>} key="1"
              extra={<a target="_blank" href="https://www.sydney.edu.au/units/INFO5990/"><QuestionCircleTwoTone /></a>}
       >
-        <p>还没开始学</p>
+        <p>计算机和商务。<br/>介绍计算机项目的开发流程，需要考虑的问题，可交付的成果等。<br/>学习如国际质量标准ISO9000、审计、质量管理、项目成功和项目管理成功的定义等</p>
       </Panel>
       <Panel header={<b>Machine Learning and Data Mining</b>} key="2"
              extra={<a target="_blank" href="https://www.sydney.edu.au/units/COMP5318/"><QuestionCircleTwoTone /></a>}
       >
-        <p>还没开始学</p>
+        <p>计算机项目管理。<br/>介绍计算机项目的目的、时间、成本、质量等<br/>通过各种成功/失败的项目管理案例学习项目管理</p>
       </Panel>
-      <Panel header={<b>Natural Language Processing</b>} key="3"
+      <Panel header={<b>Machine Learning and Data Mining</b>} key="3"
+      extra={<a target="_blank" href="https://www.sydney.edu.au/units/COMP5318/"><QuestionCircleTwoTone /></a>}
+      >
+      <p>机器学习的基本课程。<br/>介绍基础线性代数及概率学的知识，如奇异数分解、伯努利分布、贝叶斯等。<br/>学习KNN、朴素贝叶斯、逻辑回归、SVM等分类器的实现原理及其他简单的回归算法</p>
+    </Panel>
+      <Panel header={<b>Natural Language Processing</b>} key="4"
              extra={<a target="_blank" href="https://www.sydney.edu.au/units/COMP5046/"><QuestionCircleTwoTone /></a>}
       >
         <p>还没开始学</p>
       </Panel>
-      <Panel header={<b>	Parallel and Distributed Computing</b>} key="4"
+      <Panel header={<b>	Parallel and Distributed Computing</b>} key="5"
              extra={<a target="_blank" href="https://www.sydney.edu.au/units/COMP5426/"><QuestionCircleTwoTone /></a>}
       >
         <p>还没开始学</p>
       </Panel>
-      <Panel header={<b>Deep Learning</b>} key="5"
+      <Panel header={<b>Deep Learning</b>} key="6"
              extra={<a target="_blank" href="https://www.sydney.edu.au/units/COMP5329/"><QuestionCircleTwoTone /></a>}
       >
         <p>还没开始学</p>

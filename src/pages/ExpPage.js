@@ -56,6 +56,30 @@ export function Experience(props){
               <br/>
               <Meta title="Github地址" description={<a target="_blank" href="https://github.com/ZheHuangbebebe/Daily_Pixiv">https://github.com/ZheHuangbebebe/Daily_Pixiv</a>} />
             </Card>
+            <Card style={{marginBottom:16}} hoverable title="多类灰度图片分类器" bordered={false} extra={[
+              <Tag color="#85a5ff">numpy</Tag>,
+              <Tag color="#597ef7">SVD</Tag>,
+              <Tag color="#2f54eb">KNN</Tag>,
+              <Tag color="#1d39c4">Gaussian Naive Bayes</Tag>,
+            ]}>
+              <Meta title="简介" description="只用numpy包实现十类衣物(如 T-Shirt, Shirt, Pullover, Bag, Trouser)的分类器" />
+              <br/>
+              <Meta title="过程及结果" description="使用高斯朴素贝叶斯分类器，学习及分类速度快，准确率70%+， 使用KNN分类器，速度慢，准确率80%+" />
+              <br/>
+              <Meta title="Github地址" description="学校项目, 无代码地址，有实验报告" />
+            </Card>
+            <Card style={{marginBottom:16}} hoverable title="Lottery Pie" bordered={false} extra={[
+              <Tag color="#ff85c0">React</Tag>,
+              <Tag color="#f759ab">Maven</Tag>,
+              <Tag color="#eb2f96">Spring-boot</Tag>,
+              <Tag color="#c41d7f">Mybatis</Tag>,
+            ]}>
+              <Meta title="简介" description="用于抽奖或抽出某位成员的抽奖转盘，可设置分组及成员，可记录抽奖历史等" />
+              <br/>
+              <Meta title="框架" description="前端React, 后端Maven、Spring-boot、Mybatis实现" />
+              <br/>
+              <Meta title="Github地址" description="实习项目, 无代码地址" />
+            </Card>
           </Col>
           <Col span={12}>
             <Title level={2}>我的实习经历</Title>
@@ -93,6 +117,21 @@ export function Experience(props){
               <Meta title="开发辅助测试或标注的工具" description="调用下游服务的 API 或 SDK，编写帮助提效的小工具，如:OCR(图片转文字)后 通过正则批量筛选指定图片;给定参数自动生成接口测试用例等。"/>
               <br/>
               <Meta title="字节云平台及 DevOps 学习" description="学习并使用开发机，TOS 对象储存，NoSQL，SCM 仓库等。"/>
+            </Card>
+            <Card style={{marginBottom:16}} hoverable title="宜家(中国)投资有限公司" bordered={false} extra={[
+              <Tag color="#87e8de">Java</Tag>,
+              <Tag color="#5cdbd3">Spring</Tag>,
+              <Tag color="#36cfc9">Nginx</Tag>,
+              <Tag color="#08979c">Postgresql</Tag>,
+
+            ]}>
+              <Meta title="职位" description="软件开发" />
+              <br/>
+              <Meta title="开始时间 - 结束时间" description="Aug 2020 - Nov 2020" />
+              <br/>
+              <Meta title="开发小工具支持" description="对部门内提供小工具支持, 如 Java Apache POI 读取 excel 报表的统计信息并生产.eml格式又见用于部门的产品每日报告" />
+              <br/>
+              <Meta title="后端及服务器环境配置学习" description="对于Java后端搭建有基础了解, 于虚拟机配置Nginx的映射、本地映射、反向代理"/>
             </Card>
           </Col>
         </Row>

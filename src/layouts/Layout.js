@@ -63,7 +63,7 @@ export default class MainLayout extends React.Component {
   render() {
     const { current } = this.state;
     return (
-      <Layout id="layout" style={{height:"100vh", backgroundImage:{reward2}}}>
+      <Layout id="layout" style={{height:"100vh", minWidth:"1500px", backgroundImage:{reward2}}}>
         <Menu  style={{height:"48px", background: "#ebfaff"}}  theme="light" onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
           <Menu.Item key="0" icon={<AppstoreOutlined />}>
             bebebe

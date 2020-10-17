@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less';
 import { Tag, Typography, Timeline } from "antd"
-import { Bar } from '@ant-design/charts';
+import { Bar, Pie } from '@ant-design/charts';
 import QueueAnim from "rc-queue-anim";
 import "./SkillPage.css";
 const { Text, Title } = Typography;
@@ -69,73 +69,53 @@ export function Skill(props){
   const SkillBar = () => {
     const data = [
       {
-        language: 'Flask',
-        熟悉程度: 90,
-        category: "Flask",
+        type: 'React',
+        value: 28,
       },
       {
-        language: 'React',
-        熟悉程度: 80,
-        category: 'React',
+        type: 'Flask',
+        value: 23,
       },
       {
-        language: 'PostgreSQL',
-        熟悉程度: 75,
-        category: 'PostgreSQL',
+        type: 'RDBMS',
+        value: 14,
       },
       {
-        language: 'MySQL',
-        熟悉程度: 75,
-        category: 'MySQL',
+        type: 'Spring-boot/Mybatis',
+        value: 14,
       },
       {
-        language: 'MSSQL',
-        熟悉程度: 70,
-        category: 'MSSQL',
+        type: 'NoSQL',
+        value: 8,
       },
       {
-        language: 'Spring',
-        熟悉程度: 70,
-        category: 'Spring',
+        type: 'MachineLearning',
+        value: 8,
       },
-      {
-        language: 'Mybatis',
-        熟悉程度: 70,
-        category: 'Mybatis',
-      },
-      {
-        language: 'Django',
-        熟悉程度: 50,
-        category: 'Django',
-      },
-
     ];
     const config = {
-      forceFit: true,
+      appendPadding: 10,
+      data,
       title: {
         style:{fontSize:16},
         visible: true,
-        text: '我的技术栈',
+        text: '我熟悉的技术栈',
       },
-
-      data,
-      xField: '熟悉程度',
-      height:500,
-      barSize: 25,
-      yField: 'language',
-      colorField: 'category',
-      color: ['#91d5ff', '#69c0ff', '#40a9ff', "#1890ff", "#096dd9"],
-      label: {
-        visible: true,
-        position: 'middle',
-        adjustColor: true,
-        formatter: (v) => v + '%',
-      },
+      angleField: 'value',
+      colorField: 'type',
       tooltip:{
-        visible:false
+        showContent: false,
+      },
+      radius: 0.8,
+      label: {
+        type: 'spider',
+        formatter: (v, i) => {
+          console.log(i)
+          return i._origin.type + "\n" + i._origin.value + "%";
+        }
       },
     };
-    return <Bar {...config}/>;
+    return <Pie {...config}/>;
   };
 
   return (
